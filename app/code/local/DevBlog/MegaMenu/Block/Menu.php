@@ -61,7 +61,7 @@ class DevBlog_MegaMenu_Block_Menu extends Mage_Catalog_Block_Navigation
             ->addAttributeToFilter('is_active', 1)
             ->addAttributeToFilter('include_in_menu', 1)
             ->addIdFilter($nodeIds)
-            ->addAttributeToSort('entity_id')
+            ->setOrder('position', Varien_Db_Select::SQL_ASC)
             ->load();
 
 
